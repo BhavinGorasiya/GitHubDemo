@@ -10,9 +10,16 @@ namespace GitHubDemo.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index()
+        {
+            return RedirectToAction("DisplayName");
         }
 
         public IActionResult About()
